@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/head.ejs")  %> 
+</head>
+<body>
+    <%- include ("../partials/nav.ejs") %> 
+    <h2 class = "gal_title">Gallery</h2>
+
+    <div class="grid">
+        <% gal.forEach(elm=> { %>
+            <div>
+                
+                <div class="img_item">
+                <a href=<%=`/gallery/${elm.id}`%>>
+                    <img src=<%= elm.download_url %> alt="">
+                </a>
+                <h5>
+                    <%= elm.author %>
+                </h5>
+
+                
+
+                </div>
+                
+            </div>
+            <% }) %>
+    </div>
+</body>
+</html>

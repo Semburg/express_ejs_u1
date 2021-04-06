@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ("../partials/head.ejs")  %> 
+</head>
+<body>
+    <%- include ("../partials/nav.ejs") %> 
+    <h2 class="gal_title">Card</h2>
+    <div class="img_wrapper">
+    <img class="big_image" src=<%= card.download_url %> alt="">
+
+    </div>
+
+    <% for (const key in card) { %>
+        <li>
+            <%= `${key}: ${card[key]}` %>
+        </li>
+        <% } %>
+
+
+</body>
+</html>
